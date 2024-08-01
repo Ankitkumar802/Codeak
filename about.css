@@ -1,0 +1,372 @@
+/* Custom Properties for Color Themes */
+:root {
+    --primary-color: #a982d9;
+    --secondary-color: #a982d9;
+    --background-color: #a982d9; /* Set body background color to primary color */
+    --text-color: #333;
+    --footer-bg-color: #343a40;
+    --footer-text-color: #ffffff;
+    --highlight-color: #ffffff;
+    --solmon-color: #d52d1a;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color); /* Primary color background */
+    color: var(--highlight-color); /* Ensure text is readable on primary color */
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    backdrop-filter: blur(10px);
+    box-shadow: none; /* Remove shadow for transparency */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 10px 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    color: var(--highlight-color); /* Adjusted for readability on primary color */
+    font-size: 1.2rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--solmon-color);
+}
+
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--highlight-color); /* This sets the color of the hamburger bars */
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--highlight-color); /* This sets the color of the hamburger bars */
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+
+
+/* About Section */
+.about-section {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--highlight-color);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+.about-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 300px;
+    border: 5px solid var(--highlight-color);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInLeft 1s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInRight 1s ease-out;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+/* Set background color to primary */
+    color: var(--highlight-color); /* Adjust text color for contrast */
+    position: relative;
+    text-align: center;
+}
+
+.skills-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+    z-index: 1;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1s ease-out;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.skill-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 7s ease;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background-color: #f1f3f5;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    color: var(--primary-color);
+}
+
+/* Resume Section */
+.resume-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    position: relative;
+}
+
+.resume-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-out;
+}
+
+.resume-btn {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--highlight-color);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.resume-btn:hover {
+    background-color: #5a7fd1;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 60px; /* Added margin to avoid overlap */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--footer-text-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 1rem;
+    }
+
+    .about-photo {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .skill-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .resume-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}

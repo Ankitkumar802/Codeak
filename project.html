@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="icon" type="image/png" href="image-removebg-preview.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <!-- Header (Navigation) -->
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="image-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            Codeak
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-4">Projects</h1>
+            <p class="lead">Explore my work and discover the projects I am passionate about.</p>
+        </div>
+    </header> -->
+
+    <!-- About Section -->
+    <section id="about" class="about-section text-center mt-5 pt-5">
+        <div class="container">
+            <h1 class="display-4 mb-4" id="Ab7">About the Project</h1>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6">
+                    <img src="image-removebg-preview.png" alt="Ankit Kumar" class="img-fluid rounded-circle about-photo">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead about-text" id="Ab8"">In my portfolio, you'll find a diverse collection of projects that showcase my skills and creativity in technology and development. Among these projects, one notable example involves the utilization of GPT (Generative Pre-trained Transformer) to create a highly interactive and intelligent application. This project demonstrates my ability to leverage advanced AI technologies to enhance user experience and provide valuable solutions. Each project reflects a different aspect of my expertise, from web development to machine learning, illustrating my commitment to innovation and continuous learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        <h1 id="project-list">Projects List</h1>
+        <div class="row" id="projects-container">
+            <!-- Project Cards will be inserted here dynamically -->
+        </div>
+    </main>
+
+    <!-- Modal Template -->
+    <!-- Modal -->
+    <div class="modal fade" id="projectDetailsModal" tabindex="-1" aria-labelledby="projectDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectDetailsModalLabel">Project Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="project-description">Project details go here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="project.js"></script>
+</body>
+
+</html>

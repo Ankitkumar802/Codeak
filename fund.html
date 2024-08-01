@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Cause</title>
+
+    <link rel="icon" type="image/png" href="image-removebg-preview.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand img {
+            max-width: 30px;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        .text-center p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .qr-code-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .qr-code-section:hover {
+            transform: scale(1.02);
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: #fff;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: #ddd;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .modal-header {
+            background-color: #343a40;
+            color: #fff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .modal-body h6 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .modal-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #dee2e6;
+        }
+
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #343a40;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top-btn:hover {
+            background-color: #495057;
+        }
+
+        .back-to-top-btn i {
+            font-size: 24px;
+        }
+
+        #A1462007 {
+            color: #111;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: #000;
+            /* Black background for body */
+        }
+
+        /* Flex container for the main content to grow and push the footer to the bottom */
+        #main-content {
+            flex: 1;
+        }
+
+        /* General Body Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            color: #f8f9fa;
+            /* Light text color for contrast */
+        }
+
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .navbar {
+            background-color: #000 !important;
+            /* Black background for navbar */
+            transition: background-color 0.5s ease, box-shadow 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            /* Subtle border for depth */
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .navbar.scrolled {
+            background-color: #000 !important;
+            /* Match the black background on scroll */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            /* Enhanced shadow for depth */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <img src="image-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            <span class="brand-title">Codeak</span>
+            <span class="separator">|</span>
+            <span class="brand-subtitle">Support Our Cause</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="container">
+        <br><br> <br><br>
+        <h1 class="text-center">Support Our Fundraising Effort</h1>
+        <p class="text-center">To help us further our studies and achieve our dreams, we are working to raise funds.
+            This funding will support our education and skill development, helping us reach our career goals. With your
+            support and contributions, our efforts will bear fruit, and we will be able to achieve our aspirations.</p>
+
+
+        <div class="qr-code-section text-center">
+            <img src="phonepe qr code.jpg" alt="QR Code for Payment" class="img-fluid" style="max-width: 300px;">
+            <p class="mt-2">Scan the QR code to make a payment. Thank you for your support!</p>
+            <button class="btn btn-primary mt-3" data-toggle="modal" data-target="#detailsModal">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">More Information About Our Fundraising Effort</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="A1462007">
+                    <h6>Our Mission:</h6>
+                    <p>Our primary goal is to enhance our academic and professional skills by advancing our education.
+                        We are committed to excelling in our studies and gaining the knowledge necessary to achieve our
+                        career aspirations. Your support plays a crucial role in this mission.</p>
+                    <br>
+                    <h6>How Funds Will Be Used:</h6>
+                    <ul>
+                        <li><strong>Educational Materials:</strong> Funds will help purchase books, software, and other
+                            learning resources essential for our studies.</li>
+                        <li><strong>Skill Development:</strong> Contributions will support workshops, courses, and
+                            certifications that enhance our skills and qualifications.</li>
+                        <li><strong>Project Development:</strong> We plan to use part of the funds to work on innovative
+                            projects that will give us practical experience and exposure.</li>
+                    </ul>
+                    <br>
+
+                    <h6>Impact of Your Contribution:</h6>
+                    <p>Your generosity will not only support our immediate educational needs but also contribute to our
+                        long-term success. By investing in our education, you are helping us build a brighter future and
+                        achieve our dreams. We are committed to making the most of your support and are dedicated to
+                        transparency in how funds are utilized.</p>
+                    <br>
+                    <h6>Thank You:</h6>
+                    <p>We sincerely appreciate your consideration and support. Every contribution, no matter the size,
+                        makes a significant difference. If you have any questions or need further information, feel free
+                        to reach out to us.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary cen" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    
+    <br><br><br><br><br><br>
+    <!-- Footer Section -->
+    <footer class="footer text-center">
+        <p>© 2024 Ankit Kumar. Follow me on:</p>
+        <div class="social-links">
+            <a href="https://twitter.com/yourprofile" class="fab fa-twitter"></a>
+            <a href="https://github.com/yourprofile" class="fab fa-github"></a>
+            <a href="https://linkedin.com/in/yourprofile" class="fab fa-linkedin"></a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top-btn" id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Back to Top Button functionality
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        window.onscroll = () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        };
+
+        backToTopBtn.onclick = () => {
+            document.documentElement.scrollTop = 0;
+        };
+
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>

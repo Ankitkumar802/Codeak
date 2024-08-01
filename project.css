@@ -1,0 +1,263 @@
+/* Custom styles for the projects page */
+
+html, body {
+    height: 100%; /* Ensure body takes full height */
+    margin: 0; /* Remove default margins */
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+}
+
+body {
+    padding-top: 70px; /* Adjust padding for fixed navbar */
+    font-family: 'Arial', sans-serif;
+    background-color: #000000; /* Set background color to black */
+    flex: 1; /* Allow body content to expand */
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    box-shadow: none; /* Remove shadow for transparency */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 15px 2rem; /* Enhanced padding for better spacing */
+}
+
+.navbar .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Adjusted for readability on transparent background */
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #007bff; /* Accent color for active link indicator */
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Change this to your desired color */
+    /* You may need additional styling depending on your design needs */
+}
+
+#Ab7 {
+    font-size: 100px;
+    font-weight: 900;
+    background-image: url(https://images.pexels.com/photos/1561020/pexels-photo-1561020.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#Ab7::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-position: inherit;
+    background-size: inherit;
+    background-clip: inherit;
+    -webkit-background-clip: inherit;
+    color: inherit;
+    z-index: -1;
+    filter: blur(10px);
+    transition: opacity 0.3s ease;
+}
+
+#Ab7:hover {
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7), 
+        0 0 10px rgba(255, 255, 255, 0.6), 
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.4), 
+        0 0 25px rgba(255, 255, 255, 0.3), 
+        0 0 30px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+#Ab7:hover::before {
+    opacity: 0.5;
+    filter: blur(15px);
+}
+
+
+
+#Ab8{
+   color: antiquewhite;
+}
+
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 20px; /* Rounded corners for a modern look */
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow for more depth */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #007bff; /* Accent color */
+}
+
+.card-body {
+    background-color: #1f1f1f; /* Dark background for contrast */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+#project-list {
+    color: #ffffff;
+    text-align: center; /* Center the text inside the element */
+}
+
+#aboutprojecth{
+    color: #ffffff;
+}
+
+#aboutprojectp{
+    color: #ffffff;
+}
+.card-title {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    padding: 10px 20px;
+}
+
+.project-card {
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow effect */
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background-color: #fff; /* Card background color */
+    color: #333; /* Text color */
+}
+
+.card-title {
+    color: #007bff; /* Title color */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button color */
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+    border-color: #545b62;
+}
+
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced button shadow on hover */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
